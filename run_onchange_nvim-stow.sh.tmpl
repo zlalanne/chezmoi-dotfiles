@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# nvim hash: {{ include ".chezmoiexternal.toml" | sha256sum }}
+
+echo "Running nvim stow"
+stow -d ~/.local/apps -t ~/.local --no-folding --stow nvim

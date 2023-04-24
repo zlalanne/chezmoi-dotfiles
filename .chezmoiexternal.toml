@@ -4,3 +4,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".local/apps/nvim"]
+    type = "archive"
+    url = "https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz"
+    exact = true
+    stripComponents = 1
+    checksum.sha256 = "fa93f06bec111fea6f316f186b96e19ba289a2dca2d0731e23597398b7397c8f"
