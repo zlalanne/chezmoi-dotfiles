@@ -89,6 +89,9 @@ alias lg=lazygit
 # Chezmoi
 alias cdc="cd ~/.local/share/chezmoi"
 
+# exa
+alias ls=exa
+
 # Enable fzf
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#d0d0d0,bg:#121212,hl:#5f87af
