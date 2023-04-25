@@ -2,5 +2,5 @@
 
 # chezmoiexternal hash: {{ include ".chezmoiexternal.toml" | sha256sum }}
 
-echo "Running nvim stow"
-stow -d ~/.local/apps -t ~/.local --no-folding --stow nvim
+echo "Running lazygit install"
+ln -s ~/.local/apps/lazygit/lazygit ~/.local/bin/lazygit
