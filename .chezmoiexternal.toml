@@ -4,6 +4,12 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+   type = "archive"
+   url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+   exact = true
+   stripComponents = 1
+   refreshPeriod = "168h"
 [".local/apps/nvim"]
     type = "archive"
     url = "https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz"
