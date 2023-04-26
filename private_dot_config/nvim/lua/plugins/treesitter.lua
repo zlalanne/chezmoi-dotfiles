@@ -2,12 +2,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
     keys = {
       { "<c-space>", desc = "Increment selection" },
       { "<bs>", desc = "Decrement selection", mode = "x" },
     },
-    ---@type TSConfig
     opts = {
       highlight = { enable = true },
       indent = { enable = true },
