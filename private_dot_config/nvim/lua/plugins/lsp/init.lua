@@ -8,7 +8,7 @@ return {
       "mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
     },
-    config = function(_, opts)
+    config = function(_, _)
       local on_attach = function(client, buffer)
         local bufopts = { noremap = true, silent = true, buffer = buffer }
 
@@ -29,8 +29,13 @@ return {
         end
       end
 
-      -- Language server setup
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- Merge all capabilities
+      local capabilities = vim.tbl_deep_extend(
+        "force",
+        {},
+        vim.lsp.protocol.make_client_capabilities(),
+        require("cmp_nvim_lsp").default_capabilities()
+      )
 
       require("lspconfig")["lua_ls"].setup({
         on_attach = on_attach,
