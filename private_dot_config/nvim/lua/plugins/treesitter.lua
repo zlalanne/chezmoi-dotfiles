@@ -1,7 +1,7 @@
 return {
-    {
+  {
     "nvim-treesitter/playground",
-    },
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -48,8 +48,7 @@ return {
       },
     },
     config = function(_, opts)
-        require("nvim-treesitter.configs").setup(opts)
-    end
+      require("nvim-treesitter.configs").setup(opts)
+    end,
   },
 }
-

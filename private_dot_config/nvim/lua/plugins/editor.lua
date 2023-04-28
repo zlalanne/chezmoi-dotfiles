@@ -144,7 +144,7 @@ return {
       wk.register(opts.defaults)
     end,
   },
-    -- better diagnostics list and others
+  -- better diagnostics list and others
   {
     "folke/trouble.nvim",
     cmd = { "TroubleToggle", "Trouble" },

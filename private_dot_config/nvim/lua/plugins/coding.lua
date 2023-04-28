@@ -75,7 +75,7 @@ return {
     end,
   },
 
- -- auto pairs
+  -- auto pairs
   {
     "echasnovski/mini.pairs",
     event = "VeryLazy",

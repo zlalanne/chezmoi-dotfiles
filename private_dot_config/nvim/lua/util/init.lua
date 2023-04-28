@@ -43,7 +43,6 @@ function M.get_root()
   return root
 end
 
-
 -- this will return a function that calls telescope.
 -- cwd will default to util.get_root
 -- for `files`, git_files or find_files will be chosen depending on .git
