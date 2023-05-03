@@ -3,6 +3,7 @@ return {
   -- lspconfig
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mason.nvim",
       "mason-lspconfig.nvim",
@@ -42,18 +43,25 @@ return {
         capabilities = capabilities,
         settings = {
           Lua = {
-            version = "LuaJIT",
-          },
-          diagnostics = { globals = { "vim" } },
-          workspace = {
-            library = vim.api.nvim_get_runtime_file("", true),
-            checkThirdParty = false,
-          },
-          telementry = {
-            enable = false,
-          },
-          completion = {
-            callSnippet = "Replace",
+            runtime = {
+              version = "LuaJIT",
+            },
+            diagnostics = {
+              -- Get the language server to recognize the `vim` global
+              globals = { "vim" },
+            },
+            workspace = {
+              -- Make the server aware of Neovim runtime files
+              library = vim.api.nvim_get_runtime_file("", true),
+              -- Stop prompting about 'luassert'. See https://github.com/neovim/nvim-lspconfig/issues/1700
+              checkThirdParty = false,
+            },
+            telementry = {
+              enable = false,
+            },
+            completion = {
+              callSnippet = "Replace",
+            },
           },
         },
       })
